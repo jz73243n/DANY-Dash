@@ -1,0 +1,555 @@
+/* this page is available to the public */
+
+/* 
+various html elements are selected via selectors:
+https://www.w3schools.com/cssref/css_selectors.asp
+*/
+
+/* create fonts */
+
+@font-face {
+  font-family: 'proxima';
+  src:url("proxima.woff2") format("woff2"),url("proxima.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'caecilia';
+  src:url("caecilia.woff2") format("woff2"),url("caecilia.woff") format("woff");
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.center {
+  text-align: center;
+}
+
+.white {
+  color: white;
+}
+
+.red {
+  color: #ff5850;
+}
+
+.blue {
+  color: #2b316f;
+}
+
+.grey-background {
+  background-color: #ececed;
+}
+
+.red-background {
+   background-color: #ff5850;
+}
+
+
+
+body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+
+h2, h3, h4, h5, h6, p, ol, ul, li {
+  font-family: 'proxima';
+  color: #2B316F;
+}
+
+h3 {
+  font-size:24px;
+  font-style:normal;
+  font-weight:700;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+table, th, td {
+  border: 1px solid #2B316F;  
+  border-collapse: collapse;
+}
+
+/* table style */
+td > p {
+  text-align: center;
+  margin: 1px 5px 1px 5px;
+}
+
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-size: 18px;
+  opacity: 0.9;
+  line-height: 25px;
+}
+
+
+ol, ul, li {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+ol > li {
+  opacity: 0.9;
+}
+
+.back-to-top {
+  font-size: 16px;
+  font-family: 'Cambria Bold', 'Cambria', sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* welcome - prosecution process and glossary banner */
+.banner-desktop-warning {
+  background-color: #ff5850;
+  text-align: center;
+  font-family: 'proxima';
+  font-size: 20px;
+  color: white;
+}
+
+.banner {
+  align-items: center;
+  
+  font-family: 'proxima';
+  font-size: 18px;
+  border: 1px solid #ff5850;
+  border-radius: 5px;
+}
+
+.banner-ctr {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  
+}
+
+/* welcome - dashboard buttons */
+.dashboard-button-ctr {
+  display: flex; 
+  justify-content: center;
+  text-align: center; 
+  flex-wrap: wrap;
+}
+
+.dashboard-button-ctr > div {
+  margin: 10px;
+}
+
+.dashboard-button {
+  background-color: white;
+  min-width: 250px;
+  border: none;
+  border-radius: 0px;
+}
+
+
+/* navbar (overwrite) */
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+  border: 0px;
+  background-color: #2b316f;
+  min-height: 125px;
+}
+
+
+/* manhattan da logo section (left side) (overwrite) */
+.navbar-brand {
+  padding: 0;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* navbar tab section e.g. "Welcome", "Dashboards", "Resources" */
+#navbar_page {
+  padding-top: 1.5%;
+}
+
+/* navbar tabs e.g. "Dashboards", "Resources" when a dropdown menu is open (overwrite) */
+#navbar_page > .open > a, 
+#navbar_page > .open > a:focus, 
+#navbar_page > .open > a:hover {
+  background-color: #2B316F;
+}
+
+/* navbar tabs titles e.g. "Dashboards", "Resources" (overwrite) */
+#navbar_page > li > a {
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* navbar tab title that is active OR hovered over (overwrite) */
+#navbar_page > li > a:hover, 
+#navbar_page > .active > a {
+  background-color: #2B316F;
+}
+
+/* navbar menu dropdown (overwrite) */
+
+/* dropdown menu (overwrite) */
+#navbar_page > li > ul {
+  padding: 0;
+  border: none;
+}
+
+/* dropdown menu list (overwrite) */
+#navbar_page > li > ul > li {
+  background-color: white; 
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-color: black;
+  padding: 3px;
+}
+
+/* dropdown menu list link (overwrite) */
+#navbar_page > li > ul > li a {
+  text-align: center;
+  font-size: 16px;
+  color:#2B316F;
+  text-transform: uppercase;
+}
+
+/* dropdown menu list link on hover or focus (overwrite) */
+#navbar_page > li > ul > li > a:focus,
+#navbar_page > li > ul > li > a:hover {
+  background-color: white; 
+  text-decoration: underline;
+  color:#2B316F;
+}
+
+/* active dropdown menu link on hover or focus (overwrite) */
+#navbar_page > li > ul > .active> a, 
+#navbar_page > li > ul > .active> a:focus, 
+#navbar_page > li > ul > .active> a:hover {
+  background-color: white; 
+  outline: 0;
+  color: #2B316F;
+}
+
+/* hover to activate dropdown menu on desktop */
+
+/* best to design "mobile first", then add adjustments for desktop,
+hence, why we only add adjustments to a few things for hover to work on desktop below
+https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+
+768px is industry standard 
+*/
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  /* evenly space elements on navbar */
+  .navbar > .container-fluid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  /* non-dropdown menu tab (first tab) on hover (overwrite) */
+  #navbar_page > li:first-child:hover {
+    text-decoration: underline;
+  }
+  
+  /* dashboard menu tab text on hover (overwrite) */
+  #navbar_page > .dropdown > a:hover > span > span {
+    text-decoration: underline;
+  }
+ 
+ /* dashboard menu tab display dropdown on hover (overwrite) */ 
+  #navbar_page > li:hover ul {
+    display: block;
+  }
+ 
+ /* 
+ since dropdown menu will display on hover, no need to display when "clicked".
+ .open is the class provided by default navbar dropdown menu when "clicked"
+ (overwrite)
+ */
+  /*#navbar_page .open > .dropdown-menu {
+    display: none; 
+  }*/
+ 
+ /* link focus (what happens once clicked) (overwrite) */
+  #navbar_page > li > ul > li > a:focus, 
+  #navbar_page > li > ul > .active > a:focus {
+    text-decoration: none;
+  }
+}
+
+/* default caret on navbar tabs (overwrite) */
+  #navbar_page .caret {
+     border: none;
+  }
+
+
+/* footer */
+.blue-background-footer {
+  background-color: #2b316f;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+/* page intro */
+.page-intro-row {
+  background-color: #ececed;
+  padding-bottom: 15px;
+}
+
+.page-intro-text {
+  padding-left: 4rem;
+}
+
+/* page intro - icons on right side */
+.icon-ctr {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin-top: 20px;
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.icon-row > h6 {
+ margin-right: 2px; 
+}
+
+/* main row - body of each page has a space at the bottom */
+.main-row {
+  margin-bottom: 7rem;
+}
+
+
+
+/* resource pages */ 
+
+/* glossary */
+.glossary-text > p {
+  line-height: 25px; 
+  margin-bottom: 20px;
+}
+
+.glossary-tab-text {
+  padding-bottom: 30px;
+}
+
+.glossary-tab-text > a {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'proxima';
+  color: #2b316f;
+  padding-right: 11px;
+}
+
+.glossary-tab-text > .no-link {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'proxima';
+  color: #2b316f;
+  padding-right: 10px;
+  
+  opacity: 0.3;
+}
+
+/* prosecution process */
+.pp-question {
+ margin-bottom: 5rem;
+}
+
+/* tabs */
+.pros-proc-banner-ctr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pros-proc-banner-tab {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  justify-content: center;
+  
+  min-width: 145px;
+  text-align: center;
+  border: 1px solid #ff5850;
+  padding: 0 5px;
+}
+
+/* buttons */
+/* button column on right side of page */
+.pros-proc-button-col {
+  padding-left: 0; 
+  padding-top: 20px;
+}
+
+.pros-proc-dash-button {
+  border-radius: 5px; 
+  border: 1px solid #ff5850; 
+  background-color: #ff5850; 
+  font-family: 'proxima'; 
+  color: #ffffff; 
+  font-size: 18px; 
+  width: 17rem;
+}
+
+/* how to */
+.how-to-img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+
+
+/* dashboard pages  */
+
+/* dashboard - dashboard banner*/
+.dashboard-banner-ctr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard-banner-tab {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  
+  min-width: 145px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ff5850;
+  padding: 0 5px;
+}
+
+
+/* dashboard - main panel */
+.dash-mainpanel {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.graph-row {
+ margin-bottom: 6rem; 
+}
+
+/* dashboard - main panel tabs (overwrite) */
+.tabbable {
+  font-family:'proxima'; 
+}
+
+/* dashboard - main panel and graph tabs  (overwrite) */
+.dash-mainpanel > .tabbable > ul > li > a,
+.graph-row > .tabbable > ul > li > a {
+  border-radius: 0px
+}
+
+/* dashboard - main panel and graph tabs - active tab background color (overwrite) */
+.dash-mainpanel > .tabbable > ul > li.active > a,
+.graph-row > .tabbable > ul > li.active > a {
+  background-color: #2b316f;
+}
+
+/* dashboard - main panel and graph tabs - active tab font (overwrite) */
+.dash-mainpanel > .tabbable > ul > li.active > a > h4,
+.graph-row > .tabbable > ul > li.active > a  {
+  color: white;
+}
+
+/* dashboard - spinner loader class (overwrite to fix wiggling) */
+.shiny-spinner-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
+/* dashboard - value boxes */
+.value-box-dynamic {
+  border-radius: 5px;
+  border: 1px solid #ff5850;
+}
+
+
+/* dashboard - side panel */
+.dash-sidepanel {
+  background-color: #ececed;
+  padding-left: 4rem;
+  padding-right: 10px;
+}
+
+.reset-button {
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+
+
+/* filters */
+
+/* filter input labels (overwrite) */
+label.control-label {
+  font-family:'proxima'; 
+  color: #2b316f;
+  font-size: 16px;
+}
+
+/* checkbox input (overwrite) */
+.checkbox {
+  font-size: 18px;
+  font-family:'proxima'; 
+  color: #2b316f;
+}
+
+/* picker input (overwrite) */
+span.text {
+  font-family:'proxima'; 
+  color: #2b316f;
+  font-size: 18px;
+}
+
+/* (overwrite) */
+.filter-option-inner-inner {
+  font-family:'proxima'; 
+  color: #2b316f;
+  font-size: 18px;
+}
+
