@@ -1,0 +1,7 @@
+version: "3.7"
+
+services:
+  shiny:
+    image: gitlab.dany.nycnet:5050/it-devs/dany_dashboard:${APP_VERSION}
+    ports:
+      - 8101:8080
